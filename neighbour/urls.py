@@ -12,4 +12,5 @@ urlpatterns=[
     url(r'^authorities',views.authorities, name='authorities'),
     url(r'^businesses',views.businesses, name='businesses'),
     url(r'^view/blog/(\d+)',views.view_blog,name='view_blog'),
+    url(r'^my-profile/',views.my_profile, name='my-profile'),
 ]    
