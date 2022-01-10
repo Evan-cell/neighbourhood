@@ -29,7 +29,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+cloudinary.config( 
+  cloud_name = "YOUR_CLOUD_NAME", 
+  api_key = "YOUR_API_KEY", 
+  api_secret = "YOUR_API_SECRET" 
+)
 # Application definition
 
 INSTALLED_APPS = [
