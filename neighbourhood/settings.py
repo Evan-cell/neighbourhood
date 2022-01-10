@@ -10,10 +10,28 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+from pathlib import Path
+from decouple import config,Csv
+import dj_database_url
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-from pathlib import Path
+import django_heroku
+MODE=config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG', True)
+
+cloudinary.config( 
+  cloud_name = "moringa-chit-fund-private-limited", 
+  api_key = "177778488814987", 
+  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
+)
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'moringa-chit-fund-private-limited',
+    'API_KEY': '177778488814987',
+    'API_SECRET': '_7SSmn6ASgdrXTjtRRIyT8gagEY'
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,11 +48,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-cloudinary.config( 
-  cloud_name = "moringa-chit-fund-private-limited", 
-  api_key = "177778488814987", 
-  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
-)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -88,9 +102,11 @@ WSGI_APPLICATION = 'neighbourhood.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER' :   config('DB_USER'),
+        'PASSWORD' :  config('DB_PASSWORD'),
     }
 }
 
@@ -118,14 +134,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
+LOGIN_REDIRECT_URL = '/'
 
 
 # Static files (CSS, JavaScript, Images)
@@ -144,3 +157,6 @@ STATICFILES_DIR=[
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())

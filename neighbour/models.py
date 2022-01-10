@@ -105,7 +105,7 @@ class BlogPost(models.Model):
     username = models.ForeignKey(User,on_delete=models.CASCADE)
     neighbourhood= models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     post_date = models.DateTimeField(auto_now_add=True)
-    avatar = models.ImageField(upload_to='avatars/')
+    avatar = CloudinaryField('image')
 
     def __str__(self):
         return self.title

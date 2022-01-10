@@ -1,14 +1,14 @@
 {% load static %}
 <style>
     .bg-dark{
-        background: #F2FF86;
-        background: -moz-linear-gradient(left, #F2FF86 0%, #1D49A4 50%, #C5111C 100%);
-        background: -webkit-linear-gradient(left, #F2FF86 0%, #1D49A4 50%, #C5111C 100%);
-        background: linear-gradient(to right, #F2FF86 0%, #1D49A4 50%, #C5111C 100%);
+        background: #FFEB5B;
+        background: -moz-linear-gradient(left, #FFEB5B 0%, #C359AD 45%, #64FF0C 100%);
+        background: -webkit-linear-gradient(left, #FFEB5B 0%, #C359AD 45%, #64FF0C 100%);
+        background: linear-gradient(to right, #FFEB5B 0%, #C359AD 45%, #64FF0C 100%);
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">Neighbourhood Watch</a>
+  <a class="navbar-brand text-white" href="/">Neighbourhood</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,41 +16,41 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'authorities'%}">Authorities</a>
+        <a class="nav-link text-white" href="{% url 'authorities'%}">Authorities</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'blog'%}">Blog</a>
+        <a class="nav-link text-white" href="{% url 'blog'%}">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'businesses'%}">Businesses</a>
+        <a class="nav-link text-white" href="{% url 'businesses'%}">Businesses</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'health'%}">Health Services</a>
+        <a class="nav-link text-white" href="{% url 'health'%}">Health Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'notifications'%}">Notifications</a>
+        <a class="nav-link text-white" href="{% url 'notifications'%}">Notifications</a>
       </li>
 
       {% if user.is_superuser %}
       <li class="nav-item">
-        <a class="nav-link" href="/admin">Admin</a>
+        <a class="nav-link text-white" href="/admin">Admin</a>
       </li>
       {% endif %}
 
       {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'my-profile'%}">Profile</a>
+        <a class="nav-link text-white" href="{% url 'my-profile'%}">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'update-profile' %}">Edit Profile</a>
+        <a class="nav-link text-white" href="{% url 'update-profile' %}">Edit Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
+        <a class="nav-link text-white" href="/logout">Logout</a>
       </li>
 
       {% else %}
       <li class="nav-item">
-        <a class="nav-link" href="/accounts/login">Sign In</a>
+        <a class="nav-link text-white" href="/accounts/login">Sign In</a>
       </li>
       {% endif %}
     </ul>
