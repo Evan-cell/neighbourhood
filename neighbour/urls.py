@@ -15,4 +15,5 @@ urlpatterns=[
     url(r'^my-profile/',views.my_profile, name='my-profile'),
     url(r'^user/(?P<username>\w{0,50})',views.user_profile,name='user-profile'),
     url(r'^new/blogpost$',views.new_blogpost, name='new-blogpost'),
+    url(r'^new/business$',views.new_business, name='new-business'),
 ]    
