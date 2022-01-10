@@ -95,4 +95,24 @@ def user_profile(request,username):
     user = User.objects.get(username=username)
     profile =Profile.objects.get(username=user)
 
-    return render(request,'user_profile.html',{"profile":profile})        
+    return render(request,'user_profile.html',{"profile":profile})
+@login_required(login_url='/accounts/login/')
+def new_blogpost(request):
+    current_user=request.user
+    profile =Profile.objects.get(username=current_user)
+
+    if request.method=="POST":
+        form =BlogPostForm(request.POST,request.FILES)
+        if form.is_valid():
+            blogpost = form.save(commit = False)
+            blogpost.username = current_user
+            blogpost.neighbourhood = profile.neighbourhood
+            blogpost.avatar = profile.avatar
+            blogpost.save()
+
+        return HttpResponseRedirect('/blog')
+
+    else:
+        form = BlogPostForm()
+
+    return render(request,'blogpost_form.html',{"form":form})            
