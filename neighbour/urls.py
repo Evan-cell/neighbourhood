@@ -10,4 +10,5 @@ urlpatterns=[
     url(r'^blog',views.blog, name='blog'),
     url(r'^health',views.health, name='health'),
     url(r'^authorities',views.authorities, name='authorities'),
+    url(r'^businesses',views.businesses, name='businesses'),
 ]    
