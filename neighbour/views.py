@@ -56,3 +56,10 @@ def authorities(request):
     authorities = Authorities.objects.filter(neighbourhood=profile.neighbourhood)
 
     return render(request,'authorities.html',{"authorities":authorities})
+@login_required(login_url='/accounts/login/')
+def businesses(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    businesses = Business.objects.filter(neighbourhood=profile.neighbourhood)
+
+    return render(request,'businesses.html',{"businesses":businesses})
