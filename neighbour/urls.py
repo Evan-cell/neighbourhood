@@ -8,4 +8,5 @@ urlpatterns=[
     url(r'^$',views.index,name='Index'),
     url(r'^notifications',views.notification, name='notifications'),
     url(r'^blog',views.blog, name='blog'),
+    url(r'^health',views.health, name='health'),
 ]    
