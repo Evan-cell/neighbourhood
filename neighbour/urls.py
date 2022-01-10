@@ -17,4 +17,5 @@ urlpatterns=[
     url(r'^new/blogpost$',views.new_blogpost, name='new-blogpost'),
     url(r'^new/business$',views.new_business, name='new-business'),
     url(r'^create/profile$',views.create_profile, name='create-profile'),
+    url(r'^new/notification$',views.new_notification, name='new-notification'),
 ]    
