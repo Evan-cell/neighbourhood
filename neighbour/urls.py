@@ -18,4 +18,5 @@ urlpatterns=[
     url(r'^new/business$',views.new_business, name='new-business'),
     url(r'^create/profile$',views.create_profile, name='create-profile'),
     url(r'^new/notification$',views.new_notification, name='new-notification'),
+    url(r'^update/profile$',views.update_profile, name='update-profile'),
 ]    
