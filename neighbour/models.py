@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 from django.db.models import Q
 import datetime as dt
+from cloudinary.models import CloudinaryField
 
 Priority=(
     ('Informational','Informational'),
@@ -51,7 +52,7 @@ class healthservices(models.Model):
 
 
 class Business(models.Model):
-    logo = models.ImageField(upload_to='businesslogo/')
+    logo = CloudinaryField('image')
     description = HTMLField()
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     owner = models.ForeignKey(User,on_delete=models.CASCADE)
@@ -64,7 +65,7 @@ class Business(models.Model):
         return self.name
 
 class Health(models.Model):
-    logo = models.ImageField(upload_to='healthlogo/')
+    logo = CloudinaryField('image')
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     name =models.CharField(max_length=100)
     email = models.EmailField()
@@ -87,7 +88,7 @@ class Authorities(models.Model):
 
 
 class Profile(models.Model):
-    avatar = models.ImageField(upload_to='avatars/')
+    avatar = CloudinaryField('image')
     description = HTMLField()
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     username = models.ForeignKey(User,on_delete=models.CASCADE)
@@ -99,7 +100,7 @@ class Profile(models.Model):
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=150)
-    image = models.ImageField(upload_to='post/')
+    image = CloudinaryField('image')
     post = HTMLField()
     username = models.ForeignKey(User,on_delete=models.CASCADE)
     neighbourhood= models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
