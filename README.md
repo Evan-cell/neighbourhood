@@ -2,6 +2,20 @@
 Created By DEV KIM on 1-1-2022
 # Description
 This is a app that u can reach your neighbours easily and post about trending issues in your community
+# Screenshots
+HOME PAGE
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQGyhp0-eh5k6w/feedshare-shrink_800/0/1641923968903?e=1645056000&v=beta&t=antaDwU-HKVYxzkpLS-uq-H81aALOjR-76bLXKS-PC4)
+AUTHORITIES
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQFcFZHoUsrCFw/feedshare-shrink_800/0/1641924003034?e=1645056000&v=beta&t=64o_JhvenmfnyvjrMWTTD6irgqKNvUuHiDq6EFJjYCI)
+BLOG PAGE
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQGovdyqjgceKA/feedshare-shrink_800/0/1641924023080?e=1645056000&v=beta&t=BgEXU_pBjPmeEfEWyGcEhUIiQo30T9YRvHh4EVoI-e8)
+HEALTH PAGE
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQH1VNoGZxKpXQ/feedshare-shrink_800/0/1641924044544?e=1645056000&v=beta&t=dN4Nan7MB7vNYvx8-AAMSWr4ZCw3BEjkVp9GlHu9PN0)
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQEchP-4aF1vMA/feedshare-shrink_800/0/1641924070710?e=1645056000&v=beta&t=B-lPuoei1yCudoqDACgmeUAo5_y35cKAlgfDh71oFmo)
+NOTIFICATIONS PAGE
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQGCxI0QIR3weg/feedshare-shrink_800/0/1641924090290?e=1645056000&v=beta&t=nq-ccfPEAd4K1i1tIn8HBYfjHV_QAJOX0IgdA9VfnZs)
+PROFILE PAGE
+![my screenshot](https://media-exp1.licdn.com/dms/image/C4E22AQGp-vn0qL4t_Q/feedshare-shrink_800/0/1641924106147?e=1645056000&v=beta&t=65RK6vjS4qyLv744KRUuwFVpgWs1Sm28ikNFD-GMPEY)
 
 # Setup Requirements
 Git
