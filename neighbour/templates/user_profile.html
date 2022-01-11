@@ -14,14 +14,18 @@
   <div class="user-image">
     <img src="{{profile.avatar.url}}" class="gallery-image" alt=""  width=30 height=30>
   </div>
-  <p style="font-size: 22px; font-weight:bold;margin:auto; padding:2px;">{{profile.username}}</p>
-  <p class="card-text" style="font-size:20px;font-weight:bold;">{{profile.description |safe}}</p>
-  <p class="card-text" style="font-size:18px;color:white;font-weight:bold;">Email: {{profile.email}}</p>
+  <p style="font-size: 50px; color: rgb(0, 255, 21); font-weight:bold;margin:auto; padding:2px;">{{profile.username}}</p>
+  <p class="card-text" style=" font-size: 50px; color: rgb(9, 255, 0);font-weight:bold;">{{profile.description |safe}}</p>
+  <p class="card-text" style=" font-size: 50pxpx; color: rgb(60, 255, 0);font-weight:bold;">Email: {{profile.email}}</p>
 
 </div>
 
 </div>
 <style>
+  body{
+    background-color: rgb(218, 249, 250);
+  
+  }
 .top{
   margin-top: 10px;
 }
@@ -37,9 +41,7 @@ h6{
     border-radius: 50%;
     display: inline-flex;
 }
-p{
-  color: white;
-}
+
 .user-image img {
   width: 205px;
   height: 205px;
